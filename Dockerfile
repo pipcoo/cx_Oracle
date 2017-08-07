@@ -2,7 +2,7 @@
 FROM python:3.5.3-slim
 MAINTAINER pipcoo <pipcoo@pipcoo.com>
 
-ADD ./sources.list /etc/apt/sources.list
+#ADD ./sources.list /etc/apt/sources.list
 
 RUN set -x &&\
     apt-get update &&\
