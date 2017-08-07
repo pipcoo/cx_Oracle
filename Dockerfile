@@ -9,8 +9,8 @@ RUN set -x &&\
     apt-get install -y alien wget &&\
 	wget -P /tmp/ http://cf.touchfound.net/docker-config-file/tools/oracle_client/oracle-instantclient12.2-basiclite-12.2.0.1.0-1.x86_64.rpm &&\
 	wget -P /tmp/ http://cf.touchfound.net/docker-config-file/tools/oracle_client/oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm &&\
-	alien -iv /tmp/docker-config-file/tools/oracle_client/oracle-instantclient12.2-basiclite-12.2.0.1.0-1.x86_64.rpm &&\
-	alien -iv /tmp/docker-config-file/tools/oracle_client/oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm &&\
+	alien -iv /tmp/oracle-instantclient12.2-basiclite-12.2.0.1.0-1.x86_64.rpm &&\
+	alien -iv /tmp/oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm &&\
 	apt-get install -y libaio1 &&\
 	pip3 install cx_Oracle &&\
 	apt-get purge -y alien perl perl5 wget && apt-get -y autoremove && apt-get clean && \
