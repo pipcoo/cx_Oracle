@@ -1,8 +1,15 @@
 #Version 1.0.0
 FROM python:3.7.4-slim
-MAINTAINER pipcoo <pipcoo@pipcoo.com>
+MAINTAINER pipcoo <blcat@hotmail.com>
 
 RUN set -x &&\
+	echo "deb http://mirrors.aliyun.com/debian/ buster main non-free contrib" > /etc/apt/sources.list &&\
+	echo "deb http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib" >> /etc/apt/sources.list &&\
+	echo "deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib" >> /etc/apt/sources.list &&\
+	echo "deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib" >> /etc/apt/sources.list &&\
+	echo "deb-src http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib" >> /etc/apt/sources.list &&\
+	echo "deb http://mirrors.aliyun.com/debian-security/ buster/updates main non-free contrib" >> /etc/apt/sources.list &&\
+	echo "deb-src http://mirrors.aliyun.com/debian-security/ buster/updates main non-free contrib" >> /etc/apt/sources.list &&\
     apt-get update &&\
     apt-get install -y alien wget libaio1 libtiff5-dev \
 	zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev  \
